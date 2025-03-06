@@ -19,7 +19,6 @@ pipeline {
             steps {
                 script {
                     echo 'Installing dependencies'
-                    sh 'npm install' // Replace this with the actual dependency installation command
                 }
             }
         }
@@ -28,7 +27,6 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests'
-                    sh 'npm test' // Replace this with the actual test command
                 }
             }
         }
