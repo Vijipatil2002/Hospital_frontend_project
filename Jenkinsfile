@@ -8,25 +8,25 @@ pipeline {
     stages {
         stage('CI: Checkout') {
             steps {
-                script {
+                
                     echo 'Checking out the code'
-                }
+                
             }
         }
 
         stage('CI: Install Dependencies') {
             steps {
-                script {
+            
                     echo 'Installing dependencies'
-                }
+                
             }
         }
 
         stage('CI: Run Tests') {
             steps {
-                script {
+            
                     echo 'Running tests'
-                }
+                
             }
         }
         }
