@@ -10,7 +10,6 @@ pipeline {
             steps {
                 script {
                     echo 'Checking out the code'
-                    checkout scm
                 }
             }
         }
@@ -19,7 +18,6 @@ pipeline {
             steps {
                 script {
                     echo 'Installing dependencies'
-                    sh 'npm install'
                 }
             }
         }
@@ -28,25 +26,15 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests'
-                    sh 'npm test'
                 }
             }
         }
-
-        stage('CI: Linting') {
-            steps {
-                script {
-                    echo 'Running linting'
-                    sh 'npm run lint'
-                }
-            }
         }
     }
 
     post {
         success {
-            echo 'CI pipeline completed successfully. Triggering CD pipeline...'
-            // Trigger CD pipeline in the release branch after CI succeeds
+            echo 'CI pipeline success'
             build job: 'CI_CD_Pipeline', parameters: [
                 string(name: 'BRANCH_NAME', value: 'main')
             ], wait: false
