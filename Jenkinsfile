@@ -48,7 +48,7 @@ pipeline {
             echo 'CI pipeline completed successfully. Triggering CD pipeline...'
             // Trigger CD pipeline in the release branch after CI succeeds
             build job: 'CI_CD_Pipeline', parameters: [
-                string(name: 'BRANCH_NAME', value: 'release')
+                string(name: 'BRANCH_NAME', value: 'main')
             ], wait: false
         }
 
