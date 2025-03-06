@@ -38,7 +38,7 @@ pipeline {
         success {
             echo 'CI pipeline success'
             build job: 'CI_CD_Pipeline', parameters: [
-                string(name: 'BRANCH_NAME', value: 'release') // Assuming you want to trigger the CD pipeline for the 'release' branch
+                string(name: 'BRANCH_NAME', value: 'main') // Assuming you want to trigger the CD pipeline for the 'release' branch
             ], wait: false
         }
 
