@@ -10,8 +10,6 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying to Staging'
-                    checkout scm
-                    sh 'npm run deploy:staging'  // Modify this to your staging deployment command
                 }
             }
         }
@@ -20,8 +18,6 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying to Production'
-                    checkout scm
-                    sh 'npm run deploy:production'  // Modify this to your production deployment command
                 }
             }
         }
