@@ -1,6 +1,6 @@
 @Library('my-shared-library') _
 cd(
    'https://github.com/Vijipatil2002/Hospital_frontend_project.git',  
-   'master',  
+   'main',  
    'My_id'  
 )
