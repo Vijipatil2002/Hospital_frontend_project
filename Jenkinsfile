@@ -1,10 +1,7 @@
 // Jenkinsfile (CD Pipeline in release branch)
 pipeline {
     agent any
-    environment {
-        NODE_ENV = 'production'
-    }
-
+    
     stages {
         stage('CD: Deploy to Staging') {
             steps {
