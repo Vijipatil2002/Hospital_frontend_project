@@ -37,7 +37,7 @@ pipeline {
             echo 'CI pipeline success'
             build job: 'master', parameters: [
                 string(name: 'BRANCH_NAME', value: 'main') // Assuming you want to trigger the CD pipeline for the 'release' branch
-            ], wait: false
+            ], wait: true
         }
 
         failure {
